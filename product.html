@@ -1,0 +1,386 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evergreen Livestock|Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+    <style>
+      
+      .navbar-nav .nav-item .nav-link, .navbar-nav .nav-item a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.3s, transform 0.3s;
+        color: white;
+      }
+
+      .navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item a:hover {
+        color: #00d1b2;
+        transform: translateY(-2px);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .navbar-brand i {
+        color: #00d1b2;
+        transition: transform 0.3s;
+      }
+
+      
+      .navbar-brand i:hover {
+        transform: rotate(20deg);
+      }
+
+      .navbar-brand i:active {
+        transform: rotate(360deg);
+        transition-duration: 0.5s; 
+      }
+      
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 100px;
+      padding-top: 120px;
+      text-align: center;
+      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header .icon {
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      background-color: #e0ffe0;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height:200px;
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      margin: 15px 0;
+      font-size: 1.2em;
+      color: #2e8b57;
+      font-weight: bold;
+    }
+
+    .product-card p {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+.order{
+    margin:10px;
+    border:2px solid rgb(182, 161, 161);
+    border-radius:10px;
+    padding:20px;
+text-align: center;
+}
+.order h1{
+    color: #2e8b57;
+}
+
+
+      .site-footer {
+  border: 4px white;
+  border-radius: 10px;
+  margin: 5px;
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  border: 2px white;
+  border-radius:6px;
+  margin :5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+  
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #aaa;
+}
+@media screen and (max-width: 480px) {
+    .navbar-brand {
+                
+        font-size: 1.2rem;
+    }
+
+    
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        padding: 15px;
+      }
+    
+
+
+
+.footer-logo {
+    font-size: 1.5rem;
+}
+
+.footer-links {
+    flex-direction:row;
+}
+
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark fixed-top">
+<div class="container-fluid">
+  <a class="navbar-brand" href="" style="color:white; font-family:  'Arial Narrow', Arial, sans-serif; font-weight:bolder;">
+    <i class="fas fa-cow" ></i> Evergreen Livestock 
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-muted" id="offcanvasDarkNavbarLabel">Click On Below links for desire INFORMATIONS</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link" >
+            <i class="fas fa-home"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">  
+          
+          
+            <i class="fas fa-info-circle"></i> About us
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="product.html" class="nav-link">
+            <i class="fas fa-box-open"></i> Our PRODUCTS
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">
+            <i class="fas fa-envelope"></i> Contact Us
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="blogs.html" class="nav-link">
+            <i class="fas fa-blog"></i> Blogs
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="animals.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-drumstick-bite"></i> Goats & Hens
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="goat.html"><i class="fas fa-goat"></i> Goats</a></li>
+            <li><a class="dropdown-item" href="hens.html"><i class="fas fa-dove"></i> Hens</a></li>
+            <li><a class="dropdown-item" href="cows.html"><i class="fas fa-cow"></i> Cows & Bulls</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
+</nav>
+<header>
+    <span class="icon">🍃</span> 
+    Evergreen Livestock - Dairy Products
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      Welcome to Evergreen Livestock, where we offer the freshest dairy products from our farm to your table. Explore our range of milk, yogurt, and more with top-notch quality and natural goodness.
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="img/mlik.JPEG" alt="Milk">
+        <h3><br>Fresh Cow Milk</h3>
+        <p>Our cow milk is fresh, full of nutrients, and perfect for a healthy start to your day.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/tre.JPEG" alt="Yogurt">
+        <h3>Organic Yogurt</h3>
+        <p>Made from pure milk, our yogurt is a great source of probiotics and a healthy snack.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/ch.JPEG" alt="Cheese">
+        <h3>Farmhouse Cheese</h3>
+        <p>This cheese is crafted using traditional methods to deliver a rich, creamy flavor.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/butt.JPEG" alt="Butter">
+        <h3>Natural Butter</h3>
+        <p>Our butter is smooth and creamy, made from 100% fresh milk for the perfect spread.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/dairy.JPEG" alt="Cream">
+        <h3>Fresh Cream</h3>
+        <p>Rich and thick cream, perfect for desserts or cooking, straight from our farm.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/pun.JPEG" alt="Paneer">
+        <h3>Homemade Paneer</h3>
+        <p>Soft and delicious paneer, perfect for curries and a high-protein diet.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/ghe.JPEG" alt="Ghee">
+        <h3>Pure Ghee</h3>
+        <p>Our pure ghee is packed with nutrients and perfect for traditional recipes.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/ka.JPEG" alt="Kefir">
+        <h3>Kefir Drink</h3>
+        <p>A healthy probiotic drink that’s perfect for gut health and overall well-being.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/ix.JPEG" alt="Ice Cream">
+        <h3>Farm-Fresh Ice Cream</h3>
+        <p>Deliciously creamy ice cream made with natural ingredients from our farm.</p>
+      </div>
+      <div class="product-card">
+        <img src="img/byu.JPEG" alt="Buttermilk">
+        <h3>Refreshing Buttermilk</h3>
+        <p>Cool and refreshing, our buttermilk is perfect for a hot day or a light snack.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="order">
+    <h1>For Order</h1> 
+    <h3>Call at:03057647597</h3>
+    <h3>Gmail: hmdkhan874@gmail.com</h3>
+</div>
+
+
+
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <h2 class="footer-logo">Evergreen Livestock</h2>
+        <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Evergreen Livestock. All Rights Reserved.</p>
+    </div>
+  </footer> 
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
